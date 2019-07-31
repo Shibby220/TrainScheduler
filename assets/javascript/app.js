@@ -22,7 +22,6 @@ $("#addNewTrain").on("click", function(event) {
     var frequency = $("#frequency").val().trim();
 
     var newTrain = {
-    
         trainName: trainName,
 		destination: destination,
 		firstTrain: firstTrain,
