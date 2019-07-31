@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Angeles Train Scheduler</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class = "jumbotron">
+                <h1 class="text-center"><strong>Los Angeles Train Scheduler</strong></h1>
+                <h2 class="text-center">The best resource for LA public transit that most people will probably never use because it's easier to just drive</h2>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="panel-title">
+                        <h3>Current Train Schedule</h3>
+                    </div>
+
+                    <div>
+                        <table class="table" id= "trainTable">
+                            <thead>
+                                <tr>
+                                    <th>Train Name</th>
+                                    <th>Destination</th>
+                                    <th>Frequency (min)</th>
+                                    <th>Next Arrival</th>
+                                    <th>Minutes Away</th>
+                                </tr>
+                            </thead>
+
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                    
+                    <br>
+                    
+                    <div class="panel-title">
+                            <h3>Add Train</h3>
+                        </div>
+
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="Train Name">
+
+                            <input type="text" class="form-control" id="destination" placeholder="Destination" >
+                    
+                            <input type="text" class="form-control" id="firstTrain" placeholder="First Train Time (HH:mm - Military Time)">
+
+                            <input type="text" class="form-control" id="frequency" placeholder="Frequency (min)">
+                        
+                            <button class="btn btn-primary btn-lg" id="addNewTrain" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="assets/javascript/app.js"></script>
+    </body>
+</html
